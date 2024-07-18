@@ -1,0 +1,25 @@
+
+.movie-section {
+    padding: 5px;
+    border-radius: 10;
+}
+
+.section-left {
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.movie-title {
+    width: 100%;
+    font-size: 25px;
+    text-align: center;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.section-right {
+    padding: 5px;
+}
