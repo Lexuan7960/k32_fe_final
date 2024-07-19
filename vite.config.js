@@ -5,7 +5,7 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
   server: {
-    port: 10000, // Sử dụng cổng 10000
+    port: 4173, // Sử dụng cổng 4173
     host: true,  // Để Vite lắng nghe trên tất cả các địa chỉ IP
   },
   build: {
