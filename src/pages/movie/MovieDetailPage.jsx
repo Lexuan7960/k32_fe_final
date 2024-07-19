@@ -30,7 +30,7 @@ function MovieDetailPage() {
     <section>
       <h1>Movie Detail</h1>
       {
-        Object.keys(movies).length === 0 ? (<div 
+        Object.keys({movies}).length === 0 ? (<div 
           style={{
           width: '100vw',
           height: '100vh',
