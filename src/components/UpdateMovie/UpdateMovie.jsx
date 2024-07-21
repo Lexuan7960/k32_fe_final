@@ -68,9 +68,10 @@ function UpdateMovie({ selectedMovie, setIsUpdateMovie, accessToken }) {
           required
           className='input'
         />
-        <input
+        <textarea
           type='text'
           name='poster'
+          rows={4}
           value={formData.poster}
           onChange={handleChange}
           placeholder='Poster URL'
