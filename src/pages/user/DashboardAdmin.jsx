@@ -23,6 +23,7 @@ const selectedMovie = useMemo(() => {
 }, [movies, idSelectedMovie])
 
 const handleDeleteMovie = async (movieId) => {
+  if(confirm('Are you sure you want to delete this movie?')) {
   setLoading(true)
   const accessToken = localStorage.getItem(ACCESS_TOKEN)
     await dispatch(deleteMovie({ 
@@ -32,7 +33,7 @@ const handleDeleteMovie = async (movieId) => {
     await dispatch(getMovies(accessToken))
     setLoading(false)
   }
-
+}
   return (
     <div style={{
       display: 'flex',
