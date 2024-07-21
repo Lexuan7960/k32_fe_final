@@ -32,6 +32,7 @@ const handleDeleteMovie = async (movieId) => {
      }))
     await dispatch(getMovies(accessToken))
     setLoading(false)
+    setIdSelectedMovie('')
   }
 }
   return (
