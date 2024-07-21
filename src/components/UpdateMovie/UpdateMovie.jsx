@@ -6,7 +6,7 @@ import { useParams } from 'react-router-dom'
 import { Spin } from 'antd'
 import './UpdateMovie.scss'
 
-function UpdateMovie({ selectedMovie, setIsUpdateMovie, accessToken }) {
+function UpdateMovie({ selectedMovie, setIdSelectedMovie, setIsUpdateMovie, accessToken }) {
   const [ loading, setLoading ] = useState(false)
   const dispatch = useDispatch()
   const { id } =  useParams()
@@ -37,6 +37,13 @@ function UpdateMovie({ selectedMovie, setIsUpdateMovie, accessToken }) {
     }))
     await dispatch(getMovies(accessToken))
     setLoading(false)
+     setIdSelectedMovie('')
+    setIsUpdateMovie(false)
+    setFormData({
+      title: '',
+      year: '',
+      poster: '',
+    })
   }
 
 
