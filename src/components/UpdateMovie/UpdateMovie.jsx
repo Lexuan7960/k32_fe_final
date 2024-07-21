@@ -4,6 +4,7 @@ import { getMovies, removeSelectedMovie, updateMovie } from '../../redux/movie/m
 import { ACCESS_TOKEN } from '../../constants'
 import { useParams } from 'react-router-dom'
 import { Spin } from 'antd'
+import './UpdateMovie.scss'
 
 function UpdateMovie({ selectedMovie, setIsUpdateMovie, accessToken }) {
   const [ loading, setLoading ] = useState(false)
