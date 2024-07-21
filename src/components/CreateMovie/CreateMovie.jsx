@@ -24,6 +24,12 @@ function CreateMovie({setIsCreateNewMovie}) {
     }))
     await dispatch(getMovies(accessToken))
     setLoading(false)
+     setIsCreateNewMovie(false)
+    setFormData({
+      title:'',
+      year:'',
+      poster: '',
+    })
   }
   return (
     <section>
