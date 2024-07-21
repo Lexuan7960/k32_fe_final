@@ -5,7 +5,7 @@ import './CreateMovie.scss'
 import { createNewMovie, getMovies } from '../../redux/movie/movieSlice'
 import { ACCESS_TOKEN } from '../../constants'
 
-function CreateMovie(setIsCreateNewMovie) {
+function CreateMovie({setIsCreateNewMovie}) {
   const [loading, setLoading] = useState(false)
   const dispatch = useDispatch()
   const [ formData, setFormData] = useState({
