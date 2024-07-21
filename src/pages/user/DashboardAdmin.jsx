@@ -19,7 +19,7 @@ const [isUpdateMovie, setIsUpdateMovie] = useState(false)
 const [idSelectedMovie, setIdSelectedMovie] = useState('')
 
 const selectedMovie = useMemo(() => {
-  return movies.find(item => item._id === idSelectedMovie)
+  return movies.find(item => item._id === idSelectedMovie) || {}
 }, [movies, idSelectedMovie])
 
 const handleDeleteMovie = async (movieId) => {
@@ -51,6 +51,7 @@ const handleDeleteMovie = async (movieId) => {
       }
       {
         isUpdateMovie && <UpdateMovie
+        setIdSelectedMovie={setIdSelectedMovie}
         selectedMovie={selectedMovie}
         setIsUpdateMovie={setIsUpdateMovie}
          />
