@@ -78,10 +78,22 @@ function UpdateMovie({ selectedMovie, setIsUpdateMovie, accessToken }) {
           required
           className='input'
         />
-        <button type='submit' className='btn btn-submit' onClick={handleUpdateMovie}>
+        <div style={{
+          display: 'flex',
+          justifyContent: 'center',
+          gap: 5,
+          marginTop: 10,
+          widows: '100%',
+        }}
+        >
+        <button type='submit' className='btn btn-submit'>
           Update
           {loading && <Spin size='small' style={{marginLeft: 5 }} />}
         </button>
+        <button type='button' className='btn btn-cancel' onClick={() => setIsUpdateMovie(false)}>
+          Cancel
+        </button>
+          </div>
         </form>
     </section>
   )
